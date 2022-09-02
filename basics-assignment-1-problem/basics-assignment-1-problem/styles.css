@@ -34,6 +34,10 @@ p {
   border-radius: 25px;
 }
 
+img {
+  width: 25%;
+}
+
 input {
   font: inherit;
   border: 1px solid #ccc;

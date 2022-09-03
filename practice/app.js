@@ -2,14 +2,22 @@ const app = Vue.createApp({
     data() {
         return {
             list: [],
-            listItem: ''
+            listItem: '',
+            name: '',
+            enteredName: ''
         }
     },
     methods: {
-      addName() {
+      addItem() {
         this.list.push(this.listItem);
         this.listItem = '';
-      }  
+      },
+      setName(e) {
+        this.name = e.target.value;
+      },
+      enterName() {
+          this.enteredName = this.name;
+      }
     }
 });
 

@@ -15,15 +15,21 @@
     <h1>List App</h1>
 
     <section id="to-do-app">
-        <div class="input-group mb-3">
+        <!-- <div class="input-group mb-3">
             <input v-model="listItem" type="text" class="form-control" aria-label="To Do List"
                 aria-describedby="button-addon2">
-            <button v-on:click="addName" class="btn btn-outline-secondary" id="button-addon2">Button</button>
-        </div>
+            <button v-on:click="addItem" class="btn btn-outline-secondary" id="button-addon2">Button</button>
+        </div> -->
         <h2>To Do List</h2>
         <ul>
-            <li v-for="item in list">{{ item }}</li>
+            <!-- <li v-for="item in list">{{ item }}</li> -->
         </ul>
+        <div class="input-group mb-3">
+            <input v-on:input="setName" type="text" class="form-control" aria-label="To Do List"
+                aria-describedby="button-addon2">
+            <button v-on:click="enterName" class="btn btn-outline-secondary" id="button-addon3">Add your name</button>
+        </div>
+        <p>Your Name: {{ enteredName }}</p>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
